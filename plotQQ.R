@@ -56,7 +56,7 @@ plotQQ <- function(pvals_list, simplify = FALSE){
         size = 0.2,
         linetype = "solid"
       ),
-      legend.margin = margin(
+      legend.margin = ggplot2::margin(
         t = .1,
         r = .1,
         b = .1,
@@ -64,7 +64,7 @@ plotQQ <- function(pvals_list, simplify = FALSE){
         unit = 'cm'
       )
     ) +
-    scale_color_manual(values = colorPalette[1:length(pvals_list)]) +
-    labs(color = expression(lambda[1000]))
+    scale_color_manual(values = colorPalette[1:length(pvals_list)]) #+
+    #labs(color = expression(lambda[1000]))
   p1
 }
